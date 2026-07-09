@@ -99,8 +99,8 @@
     <p class="text-sm leading-6 text-ink mb-8">
       Founding engineer with 20 years of experience building and scaling backend systems, now focused on AI-native
       engineering — LLM applications and agentic systems, RAG and retrieval pipelines, evals and LLM observability,
-      and the reliability infrastructure that makes them production-grade. Comfortable across the full stack, from
-      distributed backends to the developer tooling and CI that ships them.
+      and the reliability infrastructure that makes them production-grade. Equally at home in the LLM layer and the
+      distributed backends, developer tooling, and CI that ship it to production.
     </p>
 
     <!-- Experience -->
@@ -120,12 +120,12 @@
           First engineering hire at Boon (getboon.ai), the AI intelligence layer for construction — agents that run preconstruction workflows from blueprint to bid. Built core platform systems across two product generations (freight automation → construction estimation), partnering directly with the CEO and early customers.
         </p>
         <ul class="list-disc marker:text-hairline ml-5 mt-2 text-sm leading-6 text-ink">
-          <li>Architected the workflow engine (Rails, Sidekiq, PostgreSQL) orchestrating LLM-powered document ingestion, extraction, and automation — the substrate for both product generations — plus the Vault Catalog for semantic mapping across customers' non-API systems.</li>
-          <li>Core engineer on the AI Takeoff platform: real-time multi-user annotation editing with durable offline sync, a server-side PDF pipeline handling 300+ page drawing sets, and the V1→V2 canvas migration — including a test bridge that made the untestable canvas drivable by automated verification.</li>
-          <li>Pioneered agent-native delivery: built the engineering harness (CI eval gates, acceptance-criteria-driven verification, architectural fitness tests, autonomous maintenance workflows) that enabled shipping ~1,400 merged PRs across the platform in 12 months.</li>
-          <li>Own production reliability and observability: OpenTelemetry (Grafana, Loki, Tempo, Prometheus), release-health-gated progressive rollouts, a chaos-engineering harness that surfaced real resilience bugs, and connection-pooling rollout across all services.</li>
+          <li>Architected the workflow engine (Rails, Sidekiq, PostgreSQL) for LLM-powered document ingestion — PDF parsing, structured extraction against enforced schemas, retries, and human-in-the-loop review — the substrate for both product generations, plus the Vault Catalog for semantic mapping across customers' non-API systems.</li>
+          <li>Core engineer on the AI Takeoff platform: collaborative multi-user annotation with an offline mutation queue and server-side conflict reconciliation, a server-side PDF pipeline handling 300+ page drawing sets, and the V1→V2 canvas migration — adding deterministic canvas test hooks and Playwright fixtures that drove the canvas in CI and caught migration regressions.</li>
+          <li>Built the agent-native engineering harness — CI eval gates, acceptance-criteria-driven verification, architectural fitness tests, and autonomous maintenance workflows — that let the team ship at high volume (1,400+ reviewed PRs in 12 months) without loosening regression coverage or release-health gates.</li>
+          <li>Own production reliability and observability: OpenTelemetry (Grafana, Loki, Tempo, Prometheus), release-health-gated progressive rollouts, and a chaos-engineering harness that surfaced and fixed real resilience bugs (unbounded queries, error-classification faults, third-party-outage worker hangs) before they reached customers.</li>
           <li>Shipped self-serve monetization end to end: Stripe subscriptions and token top-up billing, plus automated per-org trial provisioning for the Boon Agent product.</li>
-          <li>Hardened the LLM gateway: provider circuit breaker with mid-stream fallback, Bedrock prompt caching, and cost optimization that eliminated the largest line item of third-party model spend.</li>
+          <li>Hardened the LLM gateway: model routing, provider circuit breaker with mid-stream fallback, and Bedrock prompt caching; cost work eliminated the single largest line item of third-party model spend.</li>
         </ul>
       </article>
 
@@ -136,21 +136,14 @@
           <div class="font-mono text-xs text-mute whitespace-nowrap">Nov 2019 – Jul 2023 · SF Bay Area</div>
         </div>
         <p class="text-sm leading-6 text-mute mt-1">
-          Joined pre-IPO and helped scale through the December 2020 public offering and pandemic-era hypergrowth. Tech lead across Category Expansion (Pharmacy → Convenience & Health). 2022 performance: <em>Exceeds Expectations</em>.
+          Joined pre-IPO and helped scale through the December 2020 public offering and pandemic-era hypergrowth. Tech lead across Category Expansion (Pharmacy → Convenience & Health).
         </p>
         <ul class="list-disc marker:text-hairline ml-5 mt-2 text-sm leading-6 text-ink">
-          <li>Led DoorDash Pharmacy — HIPAA-compliant pilot with isolated infra/identity — delivered ahead of schedule.</li>
-          <li>Architected Inventory Service and influenced Restriction Rules Service used across Alcohol/Health.</li>
-          <li>Drove HSA/FSA eligibility & reimbursement features; coordinated XFN delivery and scoping.</li>
-          <li>Ran Category Expansion design reviews; mentored engineers; praised by PMs/peers for steady leadership.</li>
+          <li>Led the HIPAA-compliant DoorDash Pharmacy pilot: isolated identity and data boundaries, restricted access paths, and auditability, coordinated across engineering, product, and legal.</li>
+          <li>Architected Inventory Service and co-designed the Restriction Rules Service for eligibility and compliance constraints used across Alcohol/Health.</li>
+          <li>Drove HSA/FSA eligibility & reimbursement features; coordinated cross-functional delivery and scoping across Category Expansion.</li>
+          <li>Ran Category Expansion design reviews and mentored engineers through architecture reviews.</li>
         </ul>
-        <details class="no-print mt-2 text-sm text-mute">
-          <summary class="cursor-pointer underline decoration-hairline underline-offset-2 hover:text-draft">Selected review highlights</summary>
-          <ul class="list-disc marker:text-hairline ml-5 mt-2">
-            <li>Overall: Exceeds Expectations; Execution & Impact: Exceeds.</li>
-            <li>Feedback: "steady," "honest," "technically excellent"; reliably unblocks teammates; strong design judgment.</li>
-          </ul>
-        </details>
       </article>
 
       <!-- Square -->
@@ -165,8 +158,8 @@
         <ul class="list-disc marker:text-hairline ml-5 mt-2 text-sm leading-6 text-ink">
           <li>Led the user migration from Caviar to DoorDash following the acquisition — designed and executed data migration and identity reconciliation plan for millions of accounts with minimal downtime.</li>
           <li>Helped implement CCPA compliance features across customer data services, ensuring secure data export and deletion flows in alignment with privacy regulations.</li>
+          <li>Owned the migration runbook — backfill validation, identity reconciliation, and rollback plan — that kept the acquisition cutover low-downtime.</li>
           <li>Diagnosed and resolved scaling bottlenecks across core Rails and Postgres systems, improving throughput and API reliability during peak ordering windows.</li>
-          <li>Mentored junior engineers across backend and data pipelines; established better code review standards and system design practices adopted team-wide.</li>
         </ul>
       </article>
 
@@ -252,7 +245,7 @@
         <dt class="font-mono text-[11px] tracking-[0.14em] uppercase text-mute pt-0.5">Core</dt>
         <dd class="text-ink">Ruby/Rails, TypeScript/React, Python, PostgreSQL, Redis, Sidekiq, Kafka, Elasticsearch</dd>
         <dt class="font-mono text-[11px] tracking-[0.14em] uppercase text-mute pt-0.5">AI / LLM</dt>
-        <dd class="text-ink">Claude/OpenAI/Bedrock, agentic systems &amp; tool use, MCP, RAG &amp; vector search, prompt engineering, evals &amp; LLM-as-judge, prompt caching, fine-tuning</dd>
+        <dd class="text-ink">Claude/OpenAI/Bedrock, agentic systems &amp; tool use, MCP, RAG &amp; vector search, embeddings, structured outputs, model routing, evals &amp; LLM-as-judge, LLM observability, prompt caching</dd>
         <dt class="font-mono text-[11px] tracking-[0.14em] uppercase text-mute pt-0.5">Observability</dt>
         <dd class="text-ink">OpenTelemetry, Grafana, Loki, Tempo, Prometheus, Sentry</dd>
         <dt class="font-mono text-[11px] tracking-[0.14em] uppercase text-mute pt-0.5">Infra</dt>
