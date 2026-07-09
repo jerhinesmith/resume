@@ -4,13 +4,27 @@
   <meta charset="utf-8">
   <title>Justin Rhinesmith | Software Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Type: IBM Plex Sans (display/body) + IBM Plex Mono (utility) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <!-- Tailwind via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         fontFamily: {
-          sans: ['Inter', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'Apple Color Emoji', 'Segoe UI Emoji'],
+          sans: ['IBM Plex Sans', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial'],
+          mono: ['IBM Plex Mono', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
+        },
+        extend: {
+          colors: {
+            paper: '#FCFCFA',
+            ink: '#171A20',
+            mute: '#565D68',
+            hairline: '#D9DCE0',
+            draft: '#2450A4',
+          }
         }
       }
     }
@@ -21,65 +35,88 @@
       @page { margin: 0.5in; }
       a[href^="http"]::after { content: ""; } /* hide link URLs */
       .no-print { display: none !important; }
+      body { background: #fff !important; }
+    }
+    a:focus-visible {
+      outline: 2px solid #2450A4;
+      outline-offset: 2px;
+      border-radius: 1px;
     }
   </style>
 </head>
-<body class="bg-white text-zinc-900 antialiased">
+<body class="bg-paper text-ink antialiased">
   <main class="max-w-3xl mx-auto p-6 md:p-10">
-    <!-- Header -->
-    <header class="flex flex-col gap-1 md:gap-1 mb-6">
-      <h1 class="text-3xl font-bold tracking-tight">Justin Rhinesmith</h1>
-      <div class="text-sm text-zinc-700 flex flex-col gap-y-1 print:flex-row print:flex-wrap print:gap-x-1.5">
-        <div class="flex flex-wrap items-center gap-x-4 print:contents">
-          <span class="inline-flex items-center gap-1.5">
-            <svg class="print:hidden w-4 h-4 text-zinc-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-            Walnut Creek, CA
-          </span>
-          <span class="hidden print:inline" aria-hidden="true">•</span>
-          <span class="inline-flex items-center gap-1.5">
-            <svg class="print:hidden w-4 h-4 text-zinc-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            <a class="hover:underline" href="tel:+12604022422">(260) 402-2422</a>
-          </span>
-          <span class="hidden print:inline" aria-hidden="true">•</span>
-          <span class="inline-flex items-center gap-1.5">
-            <svg class="print:hidden w-4 h-4 text-zinc-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-            <a class="hover:underline" href="mailto:jerhinesmith@gmail.com">jerhinesmith@gmail.com</a>
-          </span>
+
+    <!-- Title block -->
+    <header class="border border-ink mb-8">
+      <div class="flex items-stretch justify-between">
+        <div class="px-4 py-3 md:px-5 md:py-4">
+          <div class="font-mono text-[11px] tracking-[0.18em] uppercase text-draft">Founding Software Engineer · AI-Native Systems</div>
+          <h1 class="text-3xl md:text-4xl font-semibold tracking-tight mt-1">Justin Rhinesmith</h1>
         </div>
-        <div class="flex flex-wrap items-center gap-x-4 print:contents">
-          <span class="hidden print:inline" aria-hidden="true">•</span>
-          <span class="inline-flex items-center gap-1.5">
-            <svg class="print:hidden w-4 h-4 text-zinc-500" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
-            <a class="hover:underline" href="https://github.com/jerhinesmith">github.com/jerhinesmith</a>
-          </span>
-          <span class="hidden print:inline" aria-hidden="true">•</span>
-          <span class="inline-flex items-center gap-1.5">
-            <svg class="print:hidden w-4 h-4 text-zinc-500" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0z"/></svg>
-            <a class="hover:underline" href="https://www.linkedin.com/in/jerhinesmith/">linkedin.com/in/jerhinesmith</a>
-          </span>
+        <div class="hidden sm:flex flex-col justify-center border-l border-ink px-4 md:px-5 font-mono text-[11px] leading-5 text-mute text-right whitespace-nowrap">
+          <span>REV 2026-07</span>
+          <span>SHEET 1 OF 1</span>
         </div>
       </div>
-      <p class="text-sm text-zinc-700 mt-2">
-        Founding engineer with 20 years of experience building and scaling backend systems, now focused on AI-native
-        engineering — LLM-powered products, agent-driven delivery, and the evals, observability, and reliability
-        infrastructure that make them trustworthy in production.
-      </p>
+      <div class="border-t border-ink px-4 py-2.5 md:px-5 text-sm text-mute">
+        <div class="flex flex-col gap-y-1 print:flex-row print:flex-wrap print:gap-x-1.5">
+          <div class="flex flex-wrap items-center gap-x-5 print:contents">
+            <span class="inline-flex items-center gap-1.5">
+              <svg class="print:hidden w-4 h-4 text-draft" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              Walnut Creek, CA
+            </span>
+            <span class="hidden print:inline" aria-hidden="true">•</span>
+            <span class="inline-flex items-center gap-1.5">
+              <svg class="print:hidden w-4 h-4 text-draft" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <a class="hover:text-draft hover:underline" href="tel:+12604022422">(260) 402-2422</a>
+            </span>
+            <span class="hidden print:inline" aria-hidden="true">•</span>
+            <span class="inline-flex items-center gap-1.5">
+              <svg class="print:hidden w-4 h-4 text-draft" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <a class="hover:text-draft hover:underline" href="mailto:jerhinesmith@gmail.com">jerhinesmith@gmail.com</a>
+            </span>
+          </div>
+          <div class="flex flex-wrap items-center gap-x-5 print:contents">
+            <span class="hidden print:inline" aria-hidden="true">•</span>
+            <span class="inline-flex items-center gap-1.5">
+              <svg class="print:hidden w-4 h-4 text-draft" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+              <a class="hover:text-draft hover:underline" href="https://github.com/jerhinesmith">github.com/jerhinesmith</a>
+            </span>
+            <span class="hidden print:inline" aria-hidden="true">•</span>
+            <span class="inline-flex items-center gap-1.5">
+              <svg class="print:hidden w-4 h-4 text-draft" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+              <a class="hover:text-draft hover:underline" href="https://www.linkedin.com/in/jerhinesmith/">linkedin.com/in/jerhinesmith</a>
+            </span>
+          </div>
+        </div>
+      </div>
     </header>
 
+    <!-- Summary -->
+    <p class="text-sm leading-6 text-ink mb-8">
+      Founding engineer with 20 years of experience building and scaling backend systems, now focused on AI-native
+      engineering — LLM-powered products, agent-driven delivery, and the evals, observability, and reliability
+      infrastructure that make them trustworthy in production.
+    </p>
+
     <!-- Experience -->
-    <section class="mb-6">
-      <h2 class="text-lg font-semibold uppercase tracking-wider text-zinc-600 mb-3">Experience</h2>
+    <section class="mb-8">
+      <div class="flex items-center gap-3 mb-4">
+        <h2 class="font-mono text-[11px] tracking-[0.18em] uppercase text-draft shrink-0">Experience</h2>
+        <div class="h-px bg-hairline w-full" aria-hidden="true"></div>
+      </div>
 
       <!-- Boon -->
-      <article class="mb-5">
-        <div class="flex items-baseline justify-between gap-4">
-          <h3 class="font-semibold text-zinc-900">Founding Software Engineer · Boon</h3>
-          <div class="text-sm text-zinc-600">Jul 2023 - Present · San Francisco Bay Area</div>
+      <article class="mb-6">
+        <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-x-4">
+          <h3 class="font-semibold text-ink">Founding Software Engineer · Boon</h3>
+          <div class="font-mono text-xs text-mute whitespace-nowrap">Jul 2023 – Present · SF Bay Area</div>
         </div>
-        <p class="text-sm text-zinc-700 mt-1">
+        <p class="text-sm leading-6 text-mute mt-1">
           First engineering hire at Boon (getboon.ai), the AI intelligence layer for construction — agents that run preconstruction workflows from blueprint to bid. Built core platform systems across two product generations (freight automation → construction estimation), partnering directly with the CEO and early customers.
         </p>
-        <ul class="list-disc ml-5 mt-2 text-sm leading-6 text-zinc-800">
+        <ul class="list-disc marker:text-hairline ml-5 mt-2 text-sm leading-6 text-ink">
           <li>Architected the workflow engine (Rails, Sidekiq, PostgreSQL) orchestrating LLM-powered document ingestion, extraction, and automation — the substrate for both product generations — plus the Vault Catalog for semantic mapping across customers' non-API systems.</li>
           <li>Core engineer on the AI Takeoff platform: real-time multi-user annotation editing with durable offline sync, a server-side PDF pipeline handling 300+ page drawing sets, and the V1→V2 canvas migration — including a test bridge that made the untestable canvas drivable by automated verification.</li>
           <li>Pioneered agent-native delivery: built the engineering harness (CI eval gates, acceptance-criteria-driven verification, architectural fitness tests, autonomous maintenance workflows) that enabled shipping ~1,400 merged PRs across the platform in 12 months.</li>
@@ -90,23 +127,23 @@
       </article>
 
       <!-- DoorDash -->
-      <article class="mb-5">
-        <div class="flex items-baseline justify-between gap-4">
-          <h3 class="font-semibold text-zinc-900">Staff Engineer · DoorDash</h3>
-          <div class="text-sm text-zinc-600">Nov 2019 - Jul 2023 · San Francisco Bay Area</div>
+      <article class="mb-6">
+        <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-x-4">
+          <h3 class="font-semibold text-ink">Staff Engineer · DoorDash</h3>
+          <div class="font-mono text-xs text-mute whitespace-nowrap">Nov 2019 – Jul 2023 · SF Bay Area</div>
         </div>
-        <p class="text-sm text-zinc-700 mt-1">
+        <p class="text-sm leading-6 text-mute mt-1">
           Tech lead across Category Expansion (Pharmacy → Convenience & Health). 2022 performance: <em>Exceeds Expectations</em>.
         </p>
-        <ul class="list-disc ml-5 mt-2 text-sm leading-6 text-zinc-800">
+        <ul class="list-disc marker:text-hairline ml-5 mt-2 text-sm leading-6 text-ink">
           <li>Led <strong>DoorDash Pharmacy</strong> — HIPAA-compliant pilot with isolated infra/identity — delivered ahead of schedule.</li>
           <li>Architected <strong>Inventory Service</strong> and influenced <strong>Restriction Rules Service</strong> used across Alcohol/Health.</li>
           <li>Drove <strong>HSA/FSA eligibility & reimbursement</strong> features; coordinated XFN delivery and scoping.</li>
           <li>Ran Category Expansion design reviews; mentored engineers; praised by PMs/peers for steady leadership.</li>
         </ul>
-        <details class="no-print mt-2 text-sm text-zinc-700">
-          <summary class="cursor-pointer underline">Selected review highlights</summary>
-          <ul class="list-disc ml-5 mt-2">
+        <details class="no-print mt-2 text-sm text-mute">
+          <summary class="cursor-pointer underline decoration-hairline underline-offset-2 hover:text-draft">Selected review highlights</summary>
+          <ul class="list-disc marker:text-hairline ml-5 mt-2">
             <li>Overall: <strong>Exceeds Expectations</strong>; Execution & Impact: <strong>Exceeds</strong>.</li>
             <li>Feedback: "steady," "honest," "technically excellent"; reliably unblocks teammates; strong design judgment.</li>
           </ul>
@@ -114,16 +151,16 @@
       </article>
 
       <!-- Square -->
-      <article class="mb-5">
-        <div class="flex items-baseline justify-between gap-4">
-          <h3 class="font-semibold text-zinc-900">Tech Lead · Square (Caviar Team)</h3>
-          <div class="text-sm text-zinc-600">Jun 2019 - Nov 2019 · San Francisco Bay Area</div>
+      <article class="mb-6">
+        <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-x-4">
+          <h3 class="font-semibold text-ink">Tech Lead · Square (Caviar Team)</h3>
+          <div class="font-mono text-xs text-mute whitespace-nowrap">Jun 2019 – Nov 2019 · SF Bay Area</div>
         </div>
-        <p class="text-sm text-zinc-700 mt-1">
+        <p class="text-sm leading-6 text-mute mt-1">
           Tech lead on the Caviar engineering team, driving scalability, data privacy, and post-acquisition integration work between Caviar and DoorDash.
         </p>
-        <ul class="list-disc ml-5 mt-2 text-sm leading-6 text-zinc-800">
-          <li>Led the <strong>user migration</strong> from Caviar to DoorDash following the acquisition—designed and executed data migration and identity reconciliation plan for millions of accounts with minimal downtime.</li>
+        <ul class="list-disc marker:text-hairline ml-5 mt-2 text-sm leading-6 text-ink">
+          <li>Led the <strong>user migration</strong> from Caviar to DoorDash following the acquisition — designed and executed data migration and identity reconciliation plan for millions of accounts with minimal downtime.</li>
           <li>Helped implement <strong>CCPA compliance</strong> features across customer data services, ensuring secure data export and deletion flows in alignment with privacy regulations.</li>
           <li>Diagnosed and resolved <strong>scaling bottlenecks</strong> across core Rails and Postgres systems, improving throughput and API reliability during peak ordering windows.</li>
           <li><strong>Mentored junior engineers</strong> across backend and data pipelines; established better code review standards and system design practices adopted team-wide.</li>
@@ -131,82 +168,88 @@
       </article>
 
       <!-- Opportunity Education -->
-      <article class="mb-5">
-        <div class="flex items-baseline justify-between gap-4">
-          <h3 class="font-semibold text-zinc-900">Director of Engineering · Opportunity Education</h3>
-          <div class="text-sm text-zinc-600">Jun 2015 - Jun 2019 · San Francisco Bay Area</div>
+      <article class="mb-6">
+        <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-x-4">
+          <h3 class="font-semibold text-ink">Director of Engineering · Opportunity Education</h3>
+          <div class="font-mono text-xs text-mute whitespace-nowrap">Jun 2015 – Jun 2019 · SF Bay Area</div>
         </div>
-        <p class="text-sm text-zinc-700 mt-1">Promoted from Lead Dev; managed Android & React products backed by Rails.</p>
-        <ul class="list-disc ml-5 mt-2 text-sm leading-6 text-zinc-800">
+        <p class="text-sm leading-6 text-mute mt-1">Promoted from Lead Dev; managed Android & React products backed by Rails.</p>
+        <ul class="list-disc marker:text-hairline ml-5 mt-2 text-sm leading-6 text-ink">
           <li>Led a 7-person team; introduced CI/CD and versioned APIs; scaled Rails/Postgres/Redis.</li>
         </ul>
       </article>
 
       <!-- MoveMeFit -->
-      <article class="mb-5">
-        <div class="flex items-baseline justify-between gap-4">
-          <h3 class="font-semibold text-zinc-900">Co-founder / CTO · MoveMeFit</h3>
-          <div class="text-sm text-zinc-600">2014 - 2015</div>
+      <article class="mb-6">
+        <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-x-4">
+          <h3 class="font-semibold text-ink">Co-founder / CTO · MoveMeFit</h3>
+          <div class="font-mono text-xs text-mute whitespace-nowrap">2014 – 2015</div>
         </div>
-        <p class="text-sm text-zinc-700 mt-1">Launched Swift iOS app featured in Apple’s <em>Best New Apps</em> and <em>Health &amp; Fitness</em>.</p>
+        <p class="text-sm leading-6 text-mute mt-1">Launched Swift iOS app featured in Apple's <em>Best New Apps</em> and <em>Health &amp; Fitness</em>.</p>
       </article>
 
       <!-- Kabam -->
-      <article class="mb-5">
-        <div class="flex items-baseline justify-between gap-4">
-          <h3 class="font-semibold text-zinc-900">Senior Engineering Manager · Kabam</h3>
-          <div class="text-sm text-zinc-600">2011 - 2014</div>
+      <article class="mb-6">
+        <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-x-4">
+          <h3 class="font-semibold text-ink">Senior Engineering Manager · Kabam</h3>
+          <div class="font-mono text-xs text-mute whitespace-nowrap">2011 – 2014</div>
         </div>
-        <ul class="list-disc ml-5 mt-2 text-sm leading-6 text-zinc-800">
+        <ul class="list-disc marker:text-hairline ml-5 mt-2 text-sm leading-6 text-ink">
           <li>Led 10 engineers; kept sub-250ms latency while serving 180k+ RPM; scaled Rails/Node backends to 1M+ MAU.</li>
         </ul>
       </article>
 
       <!-- Three Stage Media -->
-      <article class="mb-5">
-        <div class="flex items-baseline justify-between gap-4">
-          <h3 class="font-semibold text-zinc-900">Director of Development · Three Stage Media</h3>
-          <div class="text-sm text-zinc-600">2006 - 2011</div>
+      <article class="mb-6">
+        <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-x-4">
+          <h3 class="font-semibold text-ink">Director of Development · Three Stage Media</h3>
+          <div class="font-mono text-xs text-mute whitespace-nowrap">2006 – 2011</div>
         </div>
-        <p class="text-sm text-zinc-700 mt-1">Multiple Rails apps for content/document delivery; introduced testing, code reviews, CI/CD.</p>
+        <p class="text-sm leading-6 text-mute mt-1">Multiple Rails apps for content/document delivery; introduced testing, code reviews, CI/CD.</p>
       </article>
 
       <!-- Liberty Mutual -->
       <article>
-        <div class="flex items-baseline justify-between gap-4">
-          <h3 class="font-semibold text-zinc-900">Associate Software Engineer · Liberty Mutual</h3>
-          <div class="text-sm text-zinc-600">2005 - 2006</div>
+        <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-x-4">
+          <h3 class="font-semibold text-ink">Associate Software Engineer · Liberty Mutual</h3>
+          <div class="font-mono text-xs text-mute whitespace-nowrap">2005 – 2006</div>
         </div>
-        <p class="text-sm text-zinc-700 mt-1">Led migration from Lotus Notes to Mantis within Agency Markets.</p>
+        <p class="text-sm leading-6 text-mute mt-1">Led migration from Lotus Notes to Mantis within Agency Markets.</p>
       </article>
     </section>
 
     <!-- Education -->
-    <section class="mb-6">
-      <h2 class="text-lg font-semibold uppercase tracking-wider text-zinc-600 mb-2">Education</h2>
+    <section class="mb-8">
+      <div class="flex items-center gap-3 mb-3">
+        <h2 class="font-mono text-[11px] tracking-[0.18em] uppercase text-draft shrink-0">Education</h2>
+        <div class="h-px bg-hairline w-full" aria-hidden="true"></div>
+      </div>
       <div class="flex items-baseline justify-between gap-4">
         <div class="text-sm">
-          <span class="font-medium">Ball State University</span> - B.S. Computer Science; B.S. Mathematical Sciences
+          <span class="font-medium">Ball State University</span> — B.S. Computer Science; B.S. Mathematical Sciences
         </div>
-        <div class="text-sm text-zinc-600">2005 · Muncie, IN</div>
+        <div class="font-mono text-xs text-mute whitespace-nowrap">2005 · Muncie, IN</div>
       </div>
     </section>
 
     <!-- Technology -->
     <section>
-      <h2 class="text-lg font-semibold uppercase tracking-wider text-zinc-600 mb-2">Technology</h2>
-      <p class="text-sm text-zinc-800">
-        Ruby/Rails, TypeScript/React, Python, PostgreSQL, Redis, Sidekiq, Kafka, Elasticsearch ·
-        LLM systems: Claude/OpenAI/Bedrock, agent orchestration, evals, prompt caching ·
-        Observability: OpenTelemetry, Grafana, Loki, Tempo, Prometheus, Sentry ·
-        Infra: AWS, Terraform, Docker, GitHub Actions, Render, Playwright
-      </p>
+      <div class="flex items-center gap-3 mb-3">
+        <h2 class="font-mono text-[11px] tracking-[0.18em] uppercase text-draft shrink-0">Technology</h2>
+        <div class="h-px bg-hairline w-full" aria-hidden="true"></div>
+      </div>
+      <dl class="grid grid-cols-[max-content_1fr] gap-x-5 gap-y-1.5 text-sm leading-6">
+        <dt class="font-mono text-[11px] tracking-[0.14em] uppercase text-mute pt-0.5">Core</dt>
+        <dd class="text-ink">Ruby/Rails, TypeScript/React, Python, PostgreSQL, Redis, Sidekiq, Kafka, Elasticsearch</dd>
+        <dt class="font-mono text-[11px] tracking-[0.14em] uppercase text-mute pt-0.5">LLM</dt>
+        <dd class="text-ink">Claude/OpenAI/Bedrock, agent orchestration, evals, prompt caching</dd>
+        <dt class="font-mono text-[11px] tracking-[0.14em] uppercase text-mute pt-0.5">Observability</dt>
+        <dd class="text-ink">OpenTelemetry, Grafana, Loki, Tempo, Prometheus, Sentry</dd>
+        <dt class="font-mono text-[11px] tracking-[0.14em] uppercase text-mute pt-0.5">Infra</dt>
+        <dd class="text-ink">AWS, Terraform, Docker, GitHub Actions, Render, Playwright</dd>
+      </dl>
     </section>
 
-    <!-- Footer (web only) -->
-    <footer class="no-print mt-8 text-xs text-zinc-500">
-      Updated Jul 2026
-    </footer>
   </main>
 </body>
 </html>
