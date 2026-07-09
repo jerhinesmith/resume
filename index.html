@@ -97,10 +97,10 @@
 
     <!-- Summary -->
     <p class="text-sm leading-6 text-ink mb-8">
-      Founding engineer with 20 years of experience building and scaling backend systems, now focused on AI-native
-      engineering — LLM applications and agentic systems, RAG and retrieval pipelines, evals and LLM observability,
-      and the reliability infrastructure that makes them production-grade. Equally at home in the LLM layer and the
-      distributed backends, developer tooling, and CI that ship it to production.
+      Founding engineer with 20 years of experience building and scaling backend systems, now building production
+      LLM application infrastructure — document ingestion and schema-constrained extraction, agentic workflows,
+      eval gates, model routing, and LLM observability — plus the reliability, developer tooling, and CI that ship
+      it to production.
     </p>
 
     <!-- Experience -->
@@ -120,7 +120,7 @@
           First engineering hire at Boon (getboon.ai), the AI intelligence layer for construction — agents that run preconstruction workflows from blueprint to bid. Built core platform systems across two product generations (freight automation → construction estimation), partnering directly with the CEO and early customers.
         </p>
         <ul class="list-disc marker:text-hairline ml-5 mt-2 text-sm leading-6 text-ink">
-          <li>Architected the workflow engine (Rails, Sidekiq, PostgreSQL) for LLM-powered document ingestion — PDF parsing, structured extraction against enforced schemas, retries, and human-in-the-loop review — the substrate for both product generations, plus the Vault Catalog for semantic mapping across customers' non-API systems.</li>
+          <li>Architected the workflow engine (Rails, Sidekiq, PostgreSQL) for LLM-powered document ingestion — PDF parsing, structured extraction against enforced schemas, retries, and human-in-the-loop review — used across both freight automation and construction estimation, including semantic mapping from customer-specific catalogs into canonical bid/takeoff data.</li>
           <li>Core engineer on the AI Takeoff platform: collaborative multi-user annotation with an offline mutation queue and server-side conflict reconciliation, a server-side PDF pipeline handling 300+ page drawing sets, and the V1→V2 canvas migration — adding deterministic canvas test hooks and Playwright fixtures that drove the canvas in CI and caught migration regressions.</li>
           <li>Built the agent-native engineering harness — CI eval gates, acceptance-criteria-driven verification, architectural fitness tests, and autonomous maintenance workflows — that let the team ship at high volume (1,400+ reviewed PRs in 12 months) without loosening regression coverage or release-health gates.</li>
           <li class="print:hidden">Own production reliability and observability: OpenTelemetry (Grafana, Loki, Tempo, Prometheus), release-health-gated progressive rollouts, and a chaos-engineering harness that surfaced and fixed real resilience bugs (unbounded queries, error-classification faults, third-party-outage worker hangs) before they reached customers.</li>
@@ -156,9 +156,8 @@
           Tech lead on the Caviar engineering team, driving scalability, data privacy, and post-acquisition integration work between Caviar and DoorDash.
         </p>
         <ul class="list-disc marker:text-hairline ml-5 mt-2 text-sm leading-6 text-ink">
-          <li>Led the user migration from Caviar to DoorDash following the acquisition — designed and executed data migration and identity reconciliation plan for millions of accounts with minimal downtime.</li>
+          <li>Led the Caviar-to-DoorDash user migration for millions of accounts: owned the runbook — data migration, identity reconciliation, backfill validation, and rollback plan — for a low-downtime acquisition cutover.</li>
           <li>Helped implement CCPA compliance features across customer data services, ensuring secure data export and deletion flows in alignment with privacy regulations.</li>
-          <li>Owned the migration runbook — backfill validation, identity reconciliation, and rollback plan — that kept the acquisition cutover low-downtime.</li>
           <li>Diagnosed and resolved scaling bottlenecks across core Rails and Postgres systems, improving throughput and API reliability during peak ordering windows.</li>
         </ul>
       </article>
@@ -245,7 +244,7 @@
         <dt class="font-mono text-[11px] tracking-[0.14em] uppercase text-mute pt-0.5">Core</dt>
         <dd class="text-ink">Ruby/Rails, TypeScript/React, Python, PostgreSQL, Redis, Sidekiq, Kafka, Elasticsearch</dd>
         <dt class="font-mono text-[11px] tracking-[0.14em] uppercase text-mute pt-0.5">AI / LLM</dt>
-        <dd class="text-ink">Claude/OpenAI/Bedrock, agentic systems &amp; tool use, MCP, RAG &amp; vector search, embeddings, structured outputs, model routing, evals &amp; LLM-as-judge, LLM observability, prompt caching</dd>
+        <dd class="text-ink">Claude/OpenAI/Bedrock, agentic systems &amp; tool use, MCP, structured outputs, model routing, evals, LLM observability, prompt caching</dd>
         <dt class="font-mono text-[11px] tracking-[0.14em] uppercase text-mute pt-0.5">Observability</dt>
         <dd class="text-ink">OpenTelemetry, Grafana, Loki, Tempo, Prometheus, Sentry</dd>
         <dt class="font-mono text-[11px] tracking-[0.14em] uppercase text-mute pt-0.5">Infra</dt>
