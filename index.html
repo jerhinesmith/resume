@@ -4,6 +4,8 @@
   <meta charset="utf-8">
   <title>Justin Rhinesmith | Software Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Favicon: JR monogram in drafting cobalt (inline SVG, no external file) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%232450A4'/%3E%3Ctext x='32' y='33' font-family='IBM Plex Mono, ui-monospace, Menlo, monospace' font-size='30' font-weight='500' fill='%23FCFCFA' text-anchor='middle' dominant-baseline='central' letter-spacing='1'%3EJR%3C/text%3E%3C/svg%3E">
   <!-- Type: IBM Plex Sans (display/body) + IBM Plex Mono (utility) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -96,8 +98,9 @@
     <!-- Summary -->
     <p class="text-sm leading-6 text-ink mb-8">
       Founding engineer with 20 years of experience building and scaling backend systems, now focused on AI-native
-      engineering — LLM-powered products, agent-driven delivery, and the evals, observability, and reliability
-      infrastructure that make them trustworthy in production.
+      engineering — LLM applications and agentic systems, RAG and retrieval pipelines, evals and LLM observability,
+      and the reliability infrastructure that makes them production-grade. Comfortable across the full stack, from
+      distributed backends to the developer tooling and CI that ships them.
     </p>
 
     <!-- Experience -->
@@ -133,7 +136,7 @@
           <div class="font-mono text-xs text-mute whitespace-nowrap">Nov 2019 – Jul 2023 · SF Bay Area</div>
         </div>
         <p class="text-sm leading-6 text-mute mt-1">
-          Tech lead across Category Expansion (Pharmacy → Convenience & Health). 2022 performance: <em>Exceeds Expectations</em>.
+          Joined pre-IPO and helped scale through the December 2020 public offering and pandemic-era hypergrowth. Tech lead across Category Expansion (Pharmacy → Convenience & Health). 2022 performance: <em>Exceeds Expectations</em>.
         </p>
         <ul class="list-disc marker:text-hairline ml-5 mt-2 text-sm leading-6 text-ink">
           <li>Led <strong>DoorDash Pharmacy</strong> — HIPAA-compliant pilot with isolated infra/identity — delivered ahead of schedule.</li>
@@ -185,7 +188,12 @@
           <h3 class="font-semibold text-ink">Co-founder / CTO · MoveMeFit</h3>
           <div class="font-mono text-xs text-mute whitespace-nowrap">2014 – 2015</div>
         </div>
-        <p class="text-sm leading-6 text-mute mt-1">Launched Swift iOS app featured in Apple's <em>Best New Apps</em> and <em>Health &amp; Fitness</em>.</p>
+        <p class="text-sm leading-6 text-mute mt-1">Built and launched a subscription fitness platform — Swift iOS app featured in Apple's <em>Best New Apps</em> and <em>Health &amp; Fitness</em>, backed by a Rails API I architected end to end.</p>
+        <ul class="list-disc marker:text-hairline ml-5 mt-2 text-sm leading-6 text-ink">
+          <li>Designed a versioned JSON API (OAuth2) powering the iOS app: streaming workout video, social following, and scheduled group workouts.</li>
+          <li>Shipped dual-rail subscription billing (Stripe + Apple in-app purchase receipt validation) with gifts, vouchers, and referral credits.</li>
+          <li>Integrated Fitbit, Jawbone, and Spotify; Elasticsearch-backed discovery; Sidekiq/Redis background processing — with RSpec + Cucumber coverage and CI.</li>
+        </ul>
       </article>
 
       <!-- Kabam -->
@@ -194,8 +202,10 @@
           <h3 class="font-semibold text-ink">Senior Engineering Manager · Kabam</h3>
           <div class="font-mono text-xs text-mute whitespace-nowrap">2011 – 2014</div>
         </div>
+        <p class="text-sm leading-6 text-mute mt-1">Led engineering on live-service mobile/social games across iOS, Facebook, and Google platforms.</p>
         <ul class="list-disc marker:text-hairline ml-5 mt-2 text-sm leading-6 text-ink">
           <li>Led 10 engineers; kept sub-250ms latency while serving 180k+ RPM; scaled Rails/Node backends to 1M+ MAU.</li>
+          <li>Built high-throughput game backends (Rails, MySQL, Redis) with cross-platform in-app-purchase validation, tournament/leaderboard systems, and a StatsD-instrumented live-ops and analytics pipeline.</li>
         </ul>
       </article>
 
@@ -241,8 +251,8 @@
       <dl class="grid grid-cols-[max-content_1fr] gap-x-5 gap-y-1.5 text-sm leading-6">
         <dt class="font-mono text-[11px] tracking-[0.14em] uppercase text-mute pt-0.5">Core</dt>
         <dd class="text-ink">Ruby/Rails, TypeScript/React, Python, PostgreSQL, Redis, Sidekiq, Kafka, Elasticsearch</dd>
-        <dt class="font-mono text-[11px] tracking-[0.14em] uppercase text-mute pt-0.5">LLM</dt>
-        <dd class="text-ink">Claude/OpenAI/Bedrock, agent orchestration, evals, prompt caching</dd>
+        <dt class="font-mono text-[11px] tracking-[0.14em] uppercase text-mute pt-0.5">AI / LLM</dt>
+        <dd class="text-ink">Claude/OpenAI/Bedrock, agentic systems &amp; tool use, MCP, RAG &amp; vector search, prompt engineering, evals &amp; LLM-as-judge, prompt caching, fine-tuning</dd>
         <dt class="font-mono text-[11px] tracking-[0.14em] uppercase text-mute pt-0.5">Observability</dt>
         <dd class="text-ink">OpenTelemetry, Grafana, Loki, Tempo, Prometheus, Sentry</dd>
         <dt class="font-mono text-[11px] tracking-[0.14em] uppercase text-mute pt-0.5">Infra</dt>
