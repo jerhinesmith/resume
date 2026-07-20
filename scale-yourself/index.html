@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Scale Yourself — Justin Rhinesmith · Boon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,400;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <script src="vendor/chart.umd.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="scanline" aria-hidden="true"></div>
+
+    <!-- NAV -->
+    <nav class="nav">
+      <a class="nav-logo" href="#top">
+        <span class="nav-dot"></span> SCALE&nbsp;YOURSELF
+      </a>
+      <ul class="nav-links">
+        <li><a href="#leverage">Leverage</a></li>
+        <li><a href="#timeline">Timeline</a></li>
+        <li><a href="#throughput">Throughput</a></li>
+        <li><a href="#agents">Agents</a></li>
+        <li><a href="#curiosity">Curiosity</a></li>
+        <li><a href="#method">Method</a></li>
+      </ul>
+    </nav>
+
+    <!-- HERO -->
+    <header id="top" class="hero">
+      <div class="hero-inner">
+        <div class="hero-eyebrow">
+          <span>OPERATOR REPORT</span>
+          <span class="eyebrow-sep">/</span>
+          <span id="hero-window">JUL 2025 — JUL 2026</span>
+        </div>
+        <h1 class="hero-title">
+          I built the tooling<br />my team <span class="hl">runs on.</span>
+        </h1>
+        <p class="hero-lede">
+          Justin Rhinesmith · Engineering at Boon. Over the last year I shifted
+          from measuring output in commits to measuring it in <em>leverage</em>:
+          I originated most of our internal agent workflows — now adopted by
+          teammates — and turned agents into my execution layer. This is an
+          honest activity-and-leverage view; the outcomes behind it live in
+          performance-review conversations.
+        </p>
+
+        <div class="hero-readout" id="hero-readout"><!-- JS --></div>
+      </div>
+      <div class="hero-foot">
+        <span class="mono-tick">▚ scroll to power on</span>
+      </div>
+    </header>
+
+    <main>
+      <!-- LEVERAGE / COMMAND INDEX -->
+      <section id="leverage" class="section">
+        <div class="section-head">
+          <span class="marker">§01</span>
+          <div>
+            <h2 class="section-title">The command index</h2>
+            <p class="section-sub">
+              The clearest way I scaled was building the workflows my team
+              invokes by name. Attribution is by git first-commit author, so
+              these are the plugins I <em>originated</em> — not the whole shared
+              repo.
+            </p>
+          </div>
+        </div>
+
+        <div class="leverage-stats" id="leverage-stats"><!-- JS --></div>
+
+        <div class="console" id="command-console"><!-- JS --></div>
+
+        <div class="console-note">
+          <div class="cn-row">
+            <span class="cn-key">ORIGINATION</span>
+            <span class="cn-val" id="origin-note"></span>
+          </div>
+          <div class="cn-row">
+            <span class="cn-key">TEAM&nbsp;PICKUP</span>
+            <span class="cn-val" id="adoption-note"></span>
+          </div>
+          <div class="cn-row">
+            <span class="cn-key">DOGFOODING</span>
+            <span class="cn-val" id="dogfood-note"></span>
+          </div>
+          <div class="cn-row">
+            <span class="cn-key">SKILLS&nbsp;REPO</span>
+            <span class="cn-val" id="skills-note"></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- TIMELINE -->
+      <section id="timeline" class="section">
+        <div class="section-head">
+          <span class="marker">§02</span>
+          <div>
+            <h2 class="section-title">The year, in sequence</h2>
+            <p class="section-sub">
+              How the operating system changed month over month — from steady
+              hand-authored shipping to an agent-assisted workflow, built on the
+              tooling I originated. Each marker's numbers are pulled from the
+              data below.
+            </p>
+          </div>
+        </div>
+        <div class="timeline" id="timeline-track"><!-- JS --></div>
+      </section>
+
+      <!-- THROUGHPUT -->
+      <section id="throughput" class="section section-alt">
+        <div class="section-head">
+          <span class="marker">§03</span>
+          <div>
+            <h2 class="section-title">Throughput &amp; craft</h2>
+            <p class="section-sub">
+              The tooling shows up as shipped work. These are cadence signals,
+              not a scoreboard — the ramp tracks the moment agents became my
+              execution layer.
+            </p>
+          </div>
+        </div>
+
+        <div class="chart-block">
+          <div class="chart-caption">
+            <span class="cap-label">Shipped by month</span>
+            <span class="cap-hint">PRs merged &amp; Linear issues completed · <span id="tp-window"></span> window</span>
+          </div>
+          <div class="chart-frame"><canvas id="chart-shipped"></canvas></div>
+        </div>
+
+        <div class="prsize" id="prsize-strip"><!-- JS --></div>
+
+        <div class="chart-block">
+          <div class="chart-caption">
+            <span class="cap-label">Range of the work</span>
+            <span class="cap-hint">Files touched by language / framework · <span id="tb-stacks"></span> stacks across <span id="tb-repos"></span> repos · bars √-scaled for legibility, labels are exact</span>
+          </div>
+          <div class="techbreadth" id="techbreadth"><!-- JS --></div>
+          <p class="chart-foot" id="tb-foot"></p>
+        </div>
+
+        <div class="two-col">
+          <div class="chart-block">
+            <div class="chart-caption">
+              <span class="cap-label">Reviews given</span>
+              <span class="cap-hint">Distinct PRs I reviewed for teammates</span>
+            </div>
+            <div class="chart-frame chart-frame-sm"><canvas id="chart-reviews"></canvas></div>
+          </div>
+          <div class="chart-block">
+            <div class="chart-caption">
+              <span class="cap-label">Where the work landed</span>
+              <span class="cap-hint">PRs authored, by area (private repos bucketed)</span>
+            </div>
+            <div class="area-bars" id="area-bars"><!-- JS --></div>
+          </div>
+        </div>
+
+        <table class="ledger" id="throughput-table"><!-- JS --></table>
+      </section>
+
+      <!-- AGENTS -->
+      <section id="agents" class="section">
+        <div class="section-head">
+          <span class="marker">§04</span>
+          <div>
+            <h2 class="section-title">How I work with agents</h2>
+            <p class="section-sub">
+              My operating system changed. Prompt cadence covers the full year;
+              the detailed session telemetry below is a
+              <strong>recent 90-day snapshot</strong> (local transcripts rotate),
+              labeled honestly as such.
+            </p>
+          </div>
+        </div>
+
+        <div class="chart-block">
+          <div class="chart-caption">
+            <span class="cap-label">Prompt cadence</span>
+            <span class="cap-hint">Prompts per month across all workspaces · full year</span>
+          </div>
+          <div class="chart-frame"><canvas id="chart-prompts"></canvas></div>
+          <p class="chart-foot" id="prompts-foot"></p>
+        </div>
+
+        <div class="two-col">
+          <div class="chart-block">
+            <div class="chart-caption">
+              <span class="cap-label">Where the prompts went</span>
+              <span class="cap-hint">By workspace — automation vs. hands-on</span>
+            </div>
+            <div class="area-bars" id="workspace-bars"><!-- JS --></div>
+          </div>
+          <div class="chart-block">
+            <div class="chart-caption">
+              <span class="cap-label">Model mix</span>
+              <span class="cap-hint">Assistant turns by model · 90-day snapshot</span>
+            </div>
+            <div class="chart-frame chart-frame-sm"><canvas id="chart-models"></canvas></div>
+          </div>
+        </div>
+
+        <div class="snapshot" id="agent-snapshot"><!-- JS --></div>
+
+        <div class="two-col">
+          <div class="chart-block">
+            <div class="chart-caption">
+              <span class="cap-label">Instruments reached for</span>
+              <span class="cap-hint">Top skills invoked · 90-day snapshot</span>
+            </div>
+            <div class="rank" id="skills-rank"><!-- JS --></div>
+          </div>
+          <div class="chart-block">
+            <div class="chart-caption">
+              <span class="cap-label">Tools &amp; delegation</span>
+              <span class="cap-hint">Top tool calls · 90-day snapshot</span>
+            </div>
+            <div class="rank" id="tools-rank"><!-- JS --></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CURIOSITY -->
+      <section id="curiosity" class="section section-alt">
+        <div class="section-head">
+          <span class="marker">§05</span>
+          <div>
+            <h2 class="section-title">Curiosity, off the clock</h2>
+            <p class="section-sub">
+              The same instinct, pointed at my own life: small public projects
+              I build for fun. Growth isn't only what ships at work.
+            </p>
+          </div>
+        </div>
+        <div class="curiosity-grid" id="curiosity-grid"><!-- JS --></div>
+      </section>
+
+      <!-- METHOD -->
+      <section id="method" class="section">
+        <div class="section-head">
+          <span class="marker">§06</span>
+          <div>
+            <h2 class="section-title">How this report was built</h2>
+            <p class="section-sub">
+              Generated from my own machine with a privacy-first pipeline: raw
+              sources in, aggregate counts out, then a schema validator that
+              refuses to ship anything but numbers and approved labels.
+            </p>
+          </div>
+        </div>
+        <div class="method-grid" id="method-grid"><!-- JS --></div>
+        <div class="cantshow" id="cantshow-note"><!-- JS --></div>
+        <div class="excluded" id="excluded-note"><!-- JS --></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-mark"><span class="nav-dot"></span> SCALE YOURSELF</div>
+      <p class="footer-sub">
+        Justin Rhinesmith · Boon · generated 2026-07-20 · built with Claude Code
+      </p>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+    <script src="charts.js"></script>
+    <script>
+      (function () {
+        // window label from data
+        var m = DATA.meta;
+        var monLabel = function (ym) {
+          var mo = ["", "JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+          return mo[parseInt(ym.slice(5), 10)] + " " + ym.slice(0, 4);
+        };
+        var winTxt = monLabel(m.window_start) + " — " + monLabel(m.window_end);
+        document.getElementById("hero-window").textContent = winTxt;
+        var tp = document.getElementById("tp-window");
+        if (tp) tp.textContent = "Jul '25 – Jul '26";
+
+        window.__renderDOM();
+        window.__renderCharts();
+
+        // reveal-on-scroll for sections
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+          });
+        }, { threshold: 0.08 });
+        document.querySelectorAll(".section, .hero-readout").forEach(function (s) {
+          s.classList.add("reveal");
+          io.observe(s);
+        });
+
+        // animate bars + rank backgrounds when visible
+        var barObs = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (!e.isIntersecting) return;
+            e.target.querySelectorAll(".abar-fill[data-w]").forEach(function (b) {
+              b.style.width = b.getAttribute("data-w") + "%";
+            });
+            e.target.querySelectorAll(".rr-bg[data-w]").forEach(function (b) {
+              b.style.width = b.getAttribute("data-w") + "%";
+            });
+            barObs.unobserve(e.target);
+          });
+        }, { threshold: 0.2 });
+        document.querySelectorAll(".area-bars, .rank").forEach(function (s) { barObs.observe(s); });
+      })();
+    </script>
+  </body>
+</html>

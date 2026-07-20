@@ -1,0 +1,631 @@
+// Generated from build/data.json — do not edit by hand.
+const DATA = {
+  "meta": {
+    "person": "Justin Rhinesmith",
+    "handle": "jerhinesmith",
+    "org": "Boon",
+    "window_start": "2025-07",
+    "window_end": "2026-07",
+    "generated": "2026-07-20"
+  },
+  "tooling": {
+    "plugins_total": 27,
+    "plugins_by_justin": 18,
+    "skills_total": 23,
+    "skills_by_justin": 1,
+    "plugin_names": [
+      "ac-verify",
+      "analyze-video",
+      "docker-worktree",
+      "grafana",
+      "incident-replay",
+      "linear",
+      "next-ticket",
+      "perf",
+      "postmark",
+      "pr-feedback",
+      "rca",
+      "saruman",
+      "sentry",
+      "sentry-fix",
+      "slack",
+      "slite",
+      "standup",
+      "ux-assistant"
+    ],
+    "category_counts": {
+      "Dev environment": 1,
+      "Integrations": 4,
+      "Observability & incident": 6,
+      "Quality & analysis": 4,
+      "Ship pipeline": 3
+    },
+    "origin_by_month": [
+      {
+        "month": "2025-07",
+        "label": "Jul '25",
+        "value": 0
+      },
+      {
+        "month": "2025-08",
+        "label": "Aug '25",
+        "value": 0
+      },
+      {
+        "month": "2025-09",
+        "label": "Sep '25",
+        "value": 0
+      },
+      {
+        "month": "2025-10",
+        "label": "Oct '25",
+        "value": 0
+      },
+      {
+        "month": "2025-11",
+        "label": "Nov '25",
+        "value": 0
+      },
+      {
+        "month": "2025-12",
+        "label": "Dec '25",
+        "value": 0
+      },
+      {
+        "month": "2026-01",
+        "label": "Jan '26",
+        "value": 0
+      },
+      {
+        "month": "2026-02",
+        "label": "Feb '26",
+        "value": 7
+      },
+      {
+        "month": "2026-03",
+        "label": "Mar '26",
+        "value": 3
+      },
+      {
+        "month": "2026-04",
+        "label": "Apr '26",
+        "value": 0
+      },
+      {
+        "month": "2026-05",
+        "label": "May '26",
+        "value": 2
+      },
+      {
+        "month": "2026-06",
+        "label": "Jun '26",
+        "value": 5
+      },
+      {
+        "month": "2026-07",
+        "label": "Jul '26",
+        "value": 1
+      }
+    ],
+    "team_other_contributors_plugins": 9,
+    "team_other_contributors_skills": 12,
+    "dogfooding": {
+      "by_plugin": {
+        "linear": 26,
+        "slack": 23,
+        "pr-feedback": 20,
+        "slite": 18,
+        "grafana": 11,
+        "docker-worktree": 8,
+        "sentry": 4,
+        "incident-replay": 3,
+        "ac-verify": 2,
+        "ux-assistant": 1
+      },
+      "plugins_i_used": 10,
+      "total_invocations": 116
+    }
+  },
+  "github": {
+    "prs_opened": [
+      {
+        "month": "2025-07",
+        "label": "Jul '25",
+        "value": 80
+      },
+      {
+        "month": "2025-08",
+        "label": "Aug '25",
+        "value": 84
+      },
+      {
+        "month": "2025-09",
+        "label": "Sep '25",
+        "value": 67
+      },
+      {
+        "month": "2025-10",
+        "label": "Oct '25",
+        "value": 104
+      },
+      {
+        "month": "2025-11",
+        "label": "Nov '25",
+        "value": 88
+      },
+      {
+        "month": "2025-12",
+        "label": "Dec '25",
+        "value": 25
+      },
+      {
+        "month": "2026-01",
+        "label": "Jan '26",
+        "value": 36
+      },
+      {
+        "month": "2026-02",
+        "label": "Feb '26",
+        "value": 107
+      },
+      {
+        "month": "2026-03",
+        "label": "Mar '26",
+        "value": 222
+      },
+      {
+        "month": "2026-04",
+        "label": "Apr '26",
+        "value": 244
+      },
+      {
+        "month": "2026-05",
+        "label": "May '26",
+        "value": 327
+      },
+      {
+        "month": "2026-06",
+        "label": "Jun '26",
+        "value": 245
+      },
+      {
+        "month": "2026-07",
+        "label": "Jul '26",
+        "value": 106
+      }
+    ],
+    "prs_merged": [
+      {
+        "month": "2025-07",
+        "label": "Jul '25",
+        "value": 77
+      },
+      {
+        "month": "2025-08",
+        "label": "Aug '25",
+        "value": 74
+      },
+      {
+        "month": "2025-09",
+        "label": "Sep '25",
+        "value": 60
+      },
+      {
+        "month": "2025-10",
+        "label": "Oct '25",
+        "value": 96
+      },
+      {
+        "month": "2025-11",
+        "label": "Nov '25",
+        "value": 84
+      },
+      {
+        "month": "2025-12",
+        "label": "Dec '25",
+        "value": 22
+      },
+      {
+        "month": "2026-01",
+        "label": "Jan '26",
+        "value": 36
+      },
+      {
+        "month": "2026-02",
+        "label": "Feb '26",
+        "value": 94
+      },
+      {
+        "month": "2026-03",
+        "label": "Mar '26",
+        "value": 194
+      },
+      {
+        "month": "2026-04",
+        "label": "Apr '26",
+        "value": 228
+      },
+      {
+        "month": "2026-05",
+        "label": "May '26",
+        "value": 274
+      },
+      {
+        "month": "2026-06",
+        "label": "Jun '26",
+        "value": 216
+      },
+      {
+        "month": "2026-07",
+        "label": "Jul '26",
+        "value": 102
+      }
+    ],
+    "reviews_given": [
+      {
+        "month": "2025-07",
+        "label": "Jul '25",
+        "value": 69
+      },
+      {
+        "month": "2025-08",
+        "label": "Aug '25",
+        "value": 50
+      },
+      {
+        "month": "2025-09",
+        "label": "Sep '25",
+        "value": 69
+      },
+      {
+        "month": "2025-10",
+        "label": "Oct '25",
+        "value": 50
+      },
+      {
+        "month": "2025-11",
+        "label": "Nov '25",
+        "value": 43
+      },
+      {
+        "month": "2025-12",
+        "label": "Dec '25",
+        "value": 43
+      },
+      {
+        "month": "2026-01",
+        "label": "Jan '26",
+        "value": 24
+      },
+      {
+        "month": "2026-02",
+        "label": "Feb '26",
+        "value": 44
+      },
+      {
+        "month": "2026-03",
+        "label": "Mar '26",
+        "value": 111
+      },
+      {
+        "month": "2026-04",
+        "label": "Apr '26",
+        "value": 92
+      },
+      {
+        "month": "2026-05",
+        "label": "May '26",
+        "value": 74
+      },
+      {
+        "month": "2026-06",
+        "label": "Jun '26",
+        "value": 35
+      },
+      {
+        "month": "2026-07",
+        "label": "Jul '26",
+        "value": 23
+      }
+    ],
+    "prs_by_area": {
+      "Agent tooling & workflows": 114,
+      "Construction platform": 161,
+      "Infra & platform": 128,
+      "ML & data services": 34,
+      "Main app": 1200,
+      "Public / OSS": 7
+    },
+    "totals": {
+      "prs_merged": 1557,
+      "prs_opened": 1735,
+      "reviews_given": 727
+    }
+  },
+  "prompts": {
+    "by_month": [
+      {
+        "month": "2025-07",
+        "label": "Jul '25",
+        "value": 0
+      },
+      {
+        "month": "2025-08",
+        "label": "Aug '25",
+        "value": 0
+      },
+      {
+        "month": "2025-09",
+        "label": "Sep '25",
+        "value": 0
+      },
+      {
+        "month": "2025-10",
+        "label": "Oct '25",
+        "value": 2
+      },
+      {
+        "month": "2025-11",
+        "label": "Nov '25",
+        "value": 5
+      },
+      {
+        "month": "2025-12",
+        "label": "Dec '25",
+        "value": 11
+      },
+      {
+        "month": "2026-01",
+        "label": "Jan '26",
+        "value": 153
+      },
+      {
+        "month": "2026-02",
+        "label": "Feb '26",
+        "value": 1601
+      },
+      {
+        "month": "2026-03",
+        "label": "Mar '26",
+        "value": 2903
+      },
+      {
+        "month": "2026-04",
+        "label": "Apr '26",
+        "value": 2733
+      },
+      {
+        "month": "2026-05",
+        "label": "May '26",
+        "value": 15242
+      },
+      {
+        "month": "2026-06",
+        "label": "Jun '26",
+        "value": 2232
+      },
+      {
+        "month": "2026-07",
+        "label": "Jul '26",
+        "value": 1070
+      }
+    ],
+    "by_workspace": {
+      "Agent tooling & workflows": 1218,
+      "Construction platform": 1674,
+      "Gastown experiments": 11272,
+      "Infra & platform": 852,
+      "ML & data services": 80,
+      "Main app": 9844,
+      "Other": 880,
+      "Public / OSS": 132
+    },
+    "total": 25952
+  },
+  "agent_usage": {
+    "coverage_start": "2026-05",
+    "coverage_end": "2026-07",
+    "sessions_total": 119,
+    "messages_total": 172221,
+    "toolcalls_total": 57308,
+    "subagent_transcripts": 1181,
+    "model_mix": {
+      "Haiku": 6622,
+      "Opus": 87310,
+      "Sonnet": 15941
+    },
+    "tool_types": {
+      "Agent": 1185,
+      "AskUserQuestion": 483,
+      "Bash": 29250,
+      "Edit": 6376,
+      "EnterWorktree": 14,
+      "Read": 13580,
+      "SendMessage": 21,
+      "Skill": 385,
+      "TaskCreate": 433,
+      "TaskGet": 3,
+      "TaskList": 12,
+      "TaskOutput": 7,
+      "TaskStop": 8,
+      "TaskUpdate": 871,
+      "ToolSearch": 379,
+      "WebFetch": 1456,
+      "WebSearch": 24,
+      "Write": 1890,
+      "other-tool": 928,
+      "Other": 3
+    },
+    "skills_used": {
+      "code-review": 6,
+      "codex": 50,
+      "deep-research": 7,
+      "docker-worktree": 8,
+      "grafana": 11,
+      "incident-replay": 3,
+      "linear": 26,
+      "other-skill": 9,
+      "pr-feedback": 20,
+      "pr-prep": 7,
+      "sentry": 4,
+      "slack": 23,
+      "slite": 18,
+      "superpowers:brainstorming": 49,
+      "superpowers:finishing-a-development-branch": 16,
+      "superpowers:requesting-code-review": 6,
+      "superpowers:subagent-driven-development": 35,
+      "superpowers:systematic-debugging": 20,
+      "superpowers:test-driven-development": 10,
+      "superpowers:writing-plans": 42,
+      "Other": 15
+    },
+    "subagents_used": {
+      "Explore": 129,
+      "claude": 8,
+      "general-purpose": 776
+    },
+    "workspace_sessions": {
+      "Agent tooling & workflows": 35,
+      "Experiments & scratch": 13,
+      "Infra & platform": 3,
+      "ML & data services": 5,
+      "Main app": 50,
+      "Other": 9,
+      "Public / OSS": 4
+    }
+  },
+  "personal": [
+    {
+      "blurb": "Home-automation tinkering: controlling Govee smart lights",
+      "lang": "Ruby",
+      "name": "govee"
+    },
+    {
+      "blurb": "Fantasy-football data via the Sleeper API",
+      "lang": "Ruby",
+      "name": "sleeperapp"
+    },
+    {
+      "blurb": "Personal shell & editor configuration",
+      "lang": "Vim Script",
+      "name": "dotfiles"
+    },
+    {
+      "blurb": "Source for a personal resume site",
+      "lang": "HTML",
+      "name": "resume"
+    },
+    {
+      "blurb": "Fork exploring the Claude Code GitHub Action",
+      "lang": "TypeScript",
+      "name": "claude-code-action"
+    },
+    {
+      "blurb": "A personal Claude skill that plans meals around what's on sale",
+      "lang": "Skill",
+      "name": "meal-plan"
+    }
+  ],
+  "tech_breadth": {
+    "by_tech": {
+      "Docker": 25,
+      "Docs (Markdown)": 1248,
+      "JSON": 538,
+      "JavaScript": 87,
+      "Python": 1170,
+      "Rails views (ERB)": 524,
+      "React (TSX)": 296,
+      "Ruby": 8930,
+      "Ruby (Sorbet)": 86,
+      "Shell": 89,
+      "Shell (tests)": 33,
+      "Terraform": 105,
+      "TypeScript": 640,
+      "YAML/config": 966
+    },
+    "distinct_stacks": 14,
+    "repos_scanned": 12
+  },
+  "linear": {
+    "completed_by_month": [
+      {
+        "month": "2025-07",
+        "label": "Jul '25",
+        "value": 20
+      },
+      {
+        "month": "2025-08",
+        "label": "Aug '25",
+        "value": 11
+      },
+      {
+        "month": "2025-09",
+        "label": "Sep '25",
+        "value": 4
+      },
+      {
+        "month": "2025-10",
+        "label": "Oct '25",
+        "value": 3
+      },
+      {
+        "month": "2025-11",
+        "label": "Nov '25",
+        "value": 9
+      },
+      {
+        "month": "2025-12",
+        "label": "Dec '25",
+        "value": 5
+      },
+      {
+        "month": "2026-01",
+        "label": "Jan '26",
+        "value": 12
+      },
+      {
+        "month": "2026-02",
+        "label": "Feb '26",
+        "value": 57
+      },
+      {
+        "month": "2026-03",
+        "label": "Mar '26",
+        "value": 82
+      },
+      {
+        "month": "2026-04",
+        "label": "Apr '26",
+        "value": 148
+      },
+      {
+        "month": "2026-05",
+        "label": "May '26",
+        "value": 105
+      },
+      {
+        "month": "2026-06",
+        "label": "Jun '26",
+        "value": 88
+      },
+      {
+        "month": "2026-07",
+        "label": "Jul '26",
+        "value": 26
+      }
+    ],
+    "total_completed_in_window": 570,
+    "total_completed_all_time": 796
+  },
+  "pr_size": {
+    "merged_sampled": 1557,
+    "median_lines_changed": 151,
+    "median_files_changed": 3,
+    "size_buckets": {
+      "101\u2013500": 522,
+      "11\u2013100": 469,
+      "500+": 381,
+      "\u226410 lines": 185
+    }
+  }
+};
